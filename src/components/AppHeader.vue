@@ -2,6 +2,7 @@
 export default {
     data() {
         return {
+            activeItem: 0,
             menu: [
                 {
                     label: 'Characters',
@@ -50,6 +51,11 @@ export default {
                 },
             ]
         }
+    },
+    methods: {
+        selectedItem(index) {
+            this.activeItem = index
+            }
     }
 }
 </script>
@@ -61,9 +67,9 @@ export default {
     </a>
     <nav>
         <ul>
-            <li v-for="(item, index) in menu" :key="index">
-                <a :href="item.url" :class="item.active ? 'active' : ''">
-                {{item.label}}
+            <li v-for="(item, index) in menu" :key="index" @click="selectedItem(index)" :class="(activeItem === index) ? 'active' : ''">
+                <a :href="item.url">
+                    {{ item.label }}
                 </a>
             </li>
         </ul>
@@ -72,5 +78,31 @@ export default {
 </template>
 
 <style lang="scss">
-  
+@use '../styles/partials/variables' as *;
+@use '../styles/partials/mixins' as *;
+
+  header{
+    text-align: center;
+    align-items: center;
+    margin-top: 1em;
+    @include justify_around;
+
+    ul {
+        list-style: none;
+        margin: 2rem 1rem;
+        @include justify_center;
+
+        .active {
+            color: $primary;
+            border-bottom: 3px solid $primary;
+            padding-bottom: 2em;
+        }
+
+        li a {
+            padding: 1em;
+            font-size: 16px;
+            text-decoration: none;
+        }
+  }
+}
 </style>
