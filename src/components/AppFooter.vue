@@ -105,6 +105,10 @@ export default {
                             <li><a href="#">DC Power Visa</a></li>
                         </ul>
                     </div>
+
+                    <div class="dc_bg">
+                        <img src="/img/dc-logo-bg.png" alt="dc_logo">
+                    </div>
                 </div>
             </div>
     
