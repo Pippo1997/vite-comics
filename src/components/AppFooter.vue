@@ -106,7 +106,7 @@ export default {
                     </ul>
                 </div>
 
-                <div class="dc">
+                <div class="">
                     <img src="/img/dc-logo-bg.png" alt="dc-logo">
                 </div>
             </div>
@@ -142,7 +142,7 @@ export default {
 
         .cont-icon{
             @include justify_between;
-            padding: 1rem;
+            padding: 2rem;
 
             .icon {
                 display: flex;
@@ -171,7 +171,7 @@ export default {
         color: white;
 
         .flex{
-            display: flex;
+            @include justify_between;
             gap: 1rem;
 
             .col{
