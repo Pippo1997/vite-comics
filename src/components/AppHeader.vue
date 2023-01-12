@@ -1,6 +1,6 @@
 <script>
 export default {
-    data() {
+    data () {
         return {
             activeItem: 0,
             menu: [
@@ -61,35 +61,40 @@ export default {
 </script>
 
 <template lang="">
-  <header>
-    <a href="/" class="logo">
-        <img src="../assets/img/dc-logo.png" alt="logo-dc">
-    </a>
-    <nav>
-        <ul>
-            <li v-for="(item, index) in menu" :key="index" @click="selectedItem(index)" :class="(activeItem === index) ? 'active' : ''">
-                <a :href="item.url">
-                    {{ item.label }}
-                </a>
-            </li>
-        </ul>
+  <header class="container">
+      <a href="/" class="logo">
+          <img src="../assets/img/dc-logo.png" alt="logo-dc">
+      </a>
+      <nav>
+            <ul>
+                <li v-for="(item, index) in menu" :key="index" @click="selectedItem(index)" :class="(activeItem === index) ? 'active' : ''">
+                    <a :href="item.url">
+                        {{ item.label }}
+                    </a>
+                </li>
+            </ul>
        </nav>
   </header>
 </template>
 
 <style lang="scss">
+@use '../styles/generals.scss' as *;
 @use '../styles/partials/variables' as *;
 @use '../styles/partials/mixins' as *;
 
-  header{
+  header {
     text-align: center;
     align-items: center;
-    margin-top: 1em;
+    margin-top: 2rem;
     @include justify_around;
+
+    img {
+        width: 80%;
+    }
 
     ul {
         list-style: none;
-        margin: 2rem 1rem;
+        margin-top: 2rem;
         @include justify_center;
 
         .active {
@@ -98,10 +103,10 @@ export default {
             padding-bottom: 2em;
         }
 
-        li a {
-            padding: 1em;
+        li {
+            height: 100%;
+            padding: 1rem;
             font-size: 16px;
-            text-decoration: none;
         }
   }
 }
