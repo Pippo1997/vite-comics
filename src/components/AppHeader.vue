@@ -62,22 +62,22 @@ export default {
 
 <template lang="">
   <header class="container">
-      <a href="/" class="logo">
-          <img src="../assets/img/dc-logo.png" alt="logo-dc">
-      </a>
-      <nav>
-            <ul>
-                <li v-for="(item, index) in menu" :key="index" @click="selectedItem(index)" :class="(activeItem === index) ? 'active' : ''">
-                    <a :href="item.url">
-                        {{ item.label }}
-                    </a>
-                </li>
-            </ul>
-       </nav>
+        <a href="/" class="logo">
+            <img src="/img/dc-logo.png" alt="logo-dc">
+        </a>
+        <nav>
+              <ul>
+                  <li v-for="(item, index) in menu" :key="index" @click="selectedItem(index)" :class="(activeItem === index) ? 'active' : ''">
+                      <a :href="item.url">
+                          {{ item.label }}
+                      </a>
+                  </li>
+              </ul>
+         </nav>
   </header>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @use '../styles/generals.scss' as *;
 @use '../styles/partials/variables' as *;
 @use '../styles/partials/mixins' as *;
@@ -85,8 +85,7 @@ export default {
   header {
     text-align: center;
     align-items: center;
-    margin-top: 2rem;
-    @include justify_around;
+    @include justify_between;
 
     img {
         width: 80%;

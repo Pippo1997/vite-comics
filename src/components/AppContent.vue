@@ -10,7 +10,10 @@ export default {
   </main>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
+@use '../styles/generals.scss' as *;
+@use '../styles/partials/variables' as *;
+@use '../styles/partials/mixins' as *;
 
   main {
     height: 100px;
