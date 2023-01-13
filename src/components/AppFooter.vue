@@ -232,7 +232,7 @@ export default {
             .follow {
                 color: $primary;
                 padding-right: 1rem;
-                font-weight: bolder;
+                font-weight: bold;
             }
         }
     }

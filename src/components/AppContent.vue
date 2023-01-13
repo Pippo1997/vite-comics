@@ -89,6 +89,11 @@ export default {
 <template lang="">
 
   <div class="img-comcic"></div>
+  <div class="upper-title">
+    <div class="title">
+      CURRENT SERIES
+    </div>
+  </div>
   <div class="black">
     <div class="container">
       <div class="row">
@@ -112,14 +117,30 @@ export default {
     background-size: cover;
     height: 350px;
   }
+  .upper-title {
+    position: relative;
+
+    .title{
+      background-color: $primary;
+      width: 250px;
+      padding: 15px;
+      text-align: center;
+      color: white;
+      position: absolute;
+      top: -25px;
+      left: 100px;
+    }
+  }
+
   .black {
     background-color: rgba(28,28,28,255);
     text-align: center;
+    padding: 2rem;
   }
   
   .row{
-    display: flex;
     flex-wrap: wrap;
+    @include justify_between;
   }
 
   .button_load {

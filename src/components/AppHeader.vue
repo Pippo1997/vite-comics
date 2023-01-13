@@ -5,17 +5,17 @@ export default {
             activeItem: 0,
             menu: [
                 {
-                    label: 'Characters',
+                    label: 'CHARACTERS',
                     url: '#',
                     active: false
                 },
                 {
-                    label: 'Comics',
+                    label: 'COMICS',
                     url: '#',
                     active: true
                 },
                 {
-                    label: 'Movies',
+                    label: 'MOVIES',
                     url: '#',
                     active: false
                 },
@@ -25,27 +25,27 @@ export default {
                     active: false
                 },
                 {
-                    label: 'Games',
+                    label: 'GAMES',
                     url: '#',
                     active: false
                 },
                 {
-                    label: 'Video',
+                    label: 'VIDEO',
                     url: '#',
                     active: false
                 },
                 {
-                    label: 'Fans',
+                    label: 'FANS',
                     url: '#',
                     active: false
                 },
                 {
-                    label: 'News',
+                    label: 'NEWS',
                     url: '#',
                     active: false
                 },
                 {
-                    label: 'Shop',
+                    label: 'SHOP',
                     url: '#',
                     active: false
                 },
